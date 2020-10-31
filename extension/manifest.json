@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "YouTubeShare",
+  "description": "Used to share videos with friends",
+  "version": "0.0.1",
+  "author": "Ebanov Corp.",
+  "browser_action": {
+    "default_title": "YouTubeShare",
+    "default_icon": "youtube.png",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.min.js", "content.js", "share.js"]
+    }
+  ],
+  "permissions": ["activeTab","tabs"]
+}
